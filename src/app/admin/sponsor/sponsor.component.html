@@ -1,0 +1,12 @@
+<img src="{{imageUrl}}"  *ngIf="imageUrl" style="width: 100px">
+        <br>
+        <input type="file" accept="image/*" (change)="handleFileInput($event.target.files)"  #CompanyPhoto>
+        <a  class="btn btn-primary m-2 " (click)="PushZone()">Add</a>
+<div class="row m-4">
+    <div class="card col-3 p-2"*ngFor="let image of Sponsorlist">
+        <img [src]="'http://localhost:2687/Images/'+image.imageName">
+        <div class="card-body">
+        <a  class="btn btn-primary m-2 " (click)="DeleteConfirm(image.id)" >Delete</a>
+        </div>
+    </div>
+</div>

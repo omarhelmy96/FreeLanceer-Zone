@@ -1,0 +1,24 @@
+<section class="container-fluid">
+
+<input
+    #scrolly
+    type="hidden"
+    id="div1"
+    (click)="getStatsticNumber(scrolly.value)"
+  />
+  <div class="row text-center">
+    <div
+      class="col-md-3 counterBox"
+      *ngFor="let item of NumberList; let i = index"
+      [attr.data-index]="i"
+    >
+      <div class="iconBox">
+        <i class="fas fa-users"></i>
+      </div>
+
+      <span class="counter">{{ value[i] }}</span>
+      <span><strong style="font-size:xx-large;">+</strong></span>
+      <p>{{ DescriptionList[i] }}</p>
+    </div>
+    </div>
+</section>

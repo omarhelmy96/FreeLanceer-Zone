@@ -1,0 +1,35 @@
+<a  class="btn btn-danger btn-sm pr-3 pl-3 mt-4 mb-4" role="button" (click)="GoToAdd()">Add</a>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Capacity</th>
+        <th scope="col">Place</th>
+        <th scope="col">Available</th>
+        <th scope="col">Number Of Rooms</th>
+        <th scope="col">imageUrl</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Edit</th>
+
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Zone of Zones">
+            <th scope="row">{{Zone.id}} </th>
+            <td>{{Zone.name}}</td>
+            <td>{{Zone.capacity}}</td>
+            <td>{{Zone.Place}}</td>
+            <td>{{Zone.available}}</td>
+            <td>{{Zone.numberOfRooms}}</td>
+            <td><img [src]="'http://localhost:2687/Images/'+Zone.imageUrl" style="width: 30%;"></td>
+            <td>
+                <a  (click)="DeleteConfirm(Zone.id,Zone.name)" class="btn btn-danger btn-sm" role="button">Delete</a>
+            </td>
+            <td >
+                <a (click)="GoToEdit(Zone.id)" class="btn btn-danger btn-sm" role="button">Edit</a>
+               
+            </td>
+        </tr>
+    </tbody>
+</table>

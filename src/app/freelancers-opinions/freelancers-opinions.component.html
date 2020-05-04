@@ -1,0 +1,30 @@
+<div class="m-2" id="UserStory">
+    <h1 class=" text-center ">Freelancers Opinions</h1>
+  </div>
+  
+  <div class=" m-5 text-center" style="text-align: -webkit-center!important;">
+    <owl-carousel-o [options]="testimonialsOptions">
+      <ng-container *ngFor="let Freelancer of FreelancersWithOpinion">
+        <ng-template carouselSlide>
+          <div
+            id="testimonials"
+            class="card col-8 text-center summarycard"
+            style="min-height: 350px; max-height: 350;"
+          >
+            <p style="min-height: 190px; max-height: 190;" class="pt-2">
+              {{ Freelancer.opinion }}
+            </p>
+            <img
+              class="mx-auto  p-2"
+              style="border:1px solid #9a0000; width: 60px; height: 60px; border-radius: 4px;"
+              [src]="Freelancer.image"
+              alt=""
+            />
+            <h3 class="text-primary pt-1">{{ Freelancer.name }}</h3>
+            <span style=" color:#9a0000;">{{ Freelancer.jobTitle }}</span>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+  

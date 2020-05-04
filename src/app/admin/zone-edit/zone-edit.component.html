@@ -1,0 +1,64 @@
+<div class="row m-0 p-0 bg-green">
+    <div class="col-sm-4 mb-2 d-flex justify-content">
+    </div>
+    <div class="col-sm-4 mb-2 text-center ">
+      <h3 >Edit This Zone</h3>
+    </div>
+    <div class="col-sm-4 mb-2 d-flex justify-content">
+        
+    </div>
+    <!-- Text input-->
+     <div  class="row" >
+      <div class="form-group col-sm-12 d-flex justify-content">
+        <label class="col-sm-2 control-label" for="Title">Zone Name</label>
+        <div class="col-md-10">
+          <input  id="title" placeholder="Title" class="form-control input-md" 
+            type="text" #Name [(ngModel)]="ThisZone.name" >
+            {{ThisZone.name}}
+        </div>
+      </div> 
+      <!-- worker-->
+      <div class="form-group col-sm-12 d-flex justify-content">
+        <label class="col-sm-2 control-label" for="ZoneCapacity">Capacity Of Zone</label>
+        <div class="col-md-10">
+          <input id="num_worker"  name="ZoneCapacity" placeholder="Number"
+            class="form-control input-md" type="text" #Capacity [(ngModel)]="ThisZone.capacity">
+        </div>
+      </div> 
+      <!--avalible-->
+      <div class="form-group col-sm-12 d-flex justify-content">
+        <label class="col-sm-2 control-label" for="ZoneAvailable">Avalible Of Zone</label>
+        <div class="col-md-10">
+          <select class="form-control" [(ngModel)]="ThisZone.available">
+              <option [value]="1">yes</option>
+              <option [value]="0">No</option>
+          </select>
+        </div>
+      </div> 
+    <!--******** place ***********-->
+    <div class="form-group col-sm-12 d-flex justify-content">
+        <label class="col-sm-2 control-label" for="ZonePlace">Place Of Zone</label>
+        <div class="col-md-10">
+          <input id="num_worker"  name="ZonePlace" placeholder="Number"
+            class="form-control input-md" type="text" #Capacity [(ngModel)]="ThisZone.place">
+        </div>
+      </div> 
+      <!-- Text Desription-->
+      <div class="form-group col-sm-12 d-flex justify-content">
+        <label class="col-sm-2 control-label" for="numberOfRooms">Number Of Room</label>
+        <div class="col-md-10">
+          <input id="num_worker"  name="numberOfRooms" placeholder="Number"
+            class="form-control input-md" type="text" #Capacity [(ngModel)]="ThisZone.numberOfRooms">
+        </div>
+      </div> 
+       
+      <div class="col-sm-12 d-flex justify-content"> 
+        <!-- Select File -->
+        <img src="{{imageUrl}}"  *ngIf="imageUrl" style="width:250px;height:200px">
+        <input type="file" accept="image/*" (change)="handleFileInput($event.target.files)"  #CompanyPhoto>
+    
+      </div>
+      <div class="col-sm-12"><button class="btn btn-primary my-3 btn-block"(click)="SaveEdits()" >Submit</button></div>
+    </div>
+  </div> 
+  

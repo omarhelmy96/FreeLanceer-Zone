@@ -1,0 +1,40 @@
+
+
+
+
+#viewProfileButton{
+    border: 1px solid #b50000;
+    color:  #b50000;
+}
+#viewProfileButton:hover{
+    background-color: #b50000;
+    color: whitesmoke;
+}
+
+/* #UserStory::after{
+    content: '';
+    border-bottom: 5px solid black;
+    width: 50px;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 25px);
+} */
+.summarycard{
+    border:1px solid rgba(181, 0, 0, 0.3);
+    border-radius: 10px;
+    border-top: none;
+}
+.summarycard:hover{
+    box-shadow: 0 2px 8px 0px rgba(181, 0, 0, 0.5);
+    border:none
+}
+
+
+
+
+
+/************************************************************/
+
+
+
+/**********************************************************/

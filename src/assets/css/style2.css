@@ -1,0 +1,81 @@
+#footer h4 {
+    font-size: 1.8em;
+    font-weight: 200;
+    }
+    
+  
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    a{
+    text-decoration: none;
+    }
+    #footer.color {
+    color: #FFF;
+    }
+    .socialmedia
+    {
+    width: 35px;
+    height: 35px;
+    background-color: #343a40;
+    border-radius:50% ;
+    color: #000000;
+    }
+    #facebook:hover
+    {
+    background-color: #435f9f;
+    color: white;
+    }
+    #twitter:hover
+    {
+    background-color: #00aced;
+    color: white;
+    }
+    #youtube:hover
+    {
+    background-color: #b00;
+    color: white;
+    }
+    #Gmail:hover
+    {
+    background-color: #dd4b39;
+    color: white;
+    }
+    #instagram:hover
+    {
+    color: white;
+    background: radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%);
+    }
+    
+          .counter-section
+                {
+                    margin: 10% auto;
+                    color: #fff;
+                }
+                .iconBox{
+                    border: 1px solid #fff;
+                    height: 100px;
+                    width: 100px;
+                    margin: 20px auto;
+                    transform: rotate(45deg);
+                }
+                .iconBox .fas
+                {
+                    font-size: 40px;
+                    margin: 25px auto;
+                    color: #9a0000;
+                    transform: rotate(-45deg);
+    
+                }
+                
+                .counterBox .counter
+                {
+                    font-size: 80px;
+                }
+    

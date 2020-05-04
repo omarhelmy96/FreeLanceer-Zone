@@ -1,0 +1,40 @@
+<div class="m-2" id="UserStory">
+    <h1 class=" text-center ">Meet our Freelancers</h1>
+  </div>
+  <div class=" m-5 pl-4">
+    <owl-carousel-o [options]="userstoryoptions">
+      <ng-container *ngFor="let user of FreelancersWithStories">
+        <ng-template carouselSlide>
+          <div
+            class=" text-center bg-light mr-5 mb-2  p-1 ml-2 summarycard"
+            style="height: 320px;"
+          >
+            <div>
+              <a href="#">
+                <img
+                  class="rounded-circle mx-auto my-1 shadow"
+                  id="proImg"
+                  style="width: 100px; height:100px;border: 1px solid rgba(181,0,0,.5); "
+                  [src]="user.image"
+                  alt="image"
+                />
+              </a>
+              <h3>
+                <a href="#" style="text-decoration: none;">{{ user.name }} </a>
+              </h3>
+              <span style=" color:#9a0000;" class="d-block my-2">{{
+                user.jobTitle
+              }}</span>
+              <p style="min-height: 73px;">{{ user.brief }}</p>
+              <!-- <ul class="list-group list-group-flush">
+                          <li class="list-group-item bg-transparent border-0 " >Country: <strong style="color: #b50000 ;">{{slide.Country}}</strong></li>
+                          <li class="list-group-item bg-transparent border-0" >Job Success Rate: <strong style="color: #b50000 ;">100%</strong></li>
+                      </ul> -->
+              <a id="viewProfileButton" href="#" class="btn">View Profile</a>
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+  

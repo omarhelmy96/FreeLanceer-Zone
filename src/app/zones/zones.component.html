@@ -1,0 +1,20 @@
+<div>
+    <owl-carousel-o [options]="customOptionsforZone" >
+        <ng-container *ngFor="let Zone of Zones; let i = index" >
+            <ng-template carouselSlide >
+              <div class="  m-3   containerName " [style.background]="'url(http://localhost:2687/Images/' + Zone.imageUrl + ')'" >
+                <div class="ZoneName text-center" (mouseenter)="myMove($event)">
+                    <span class="HeaderNameZone ">{{Zone.name}}</span> 
+                </div>
+                <div class="DetailsZoneName">
+                    <span class="attr">place : {{Zone.place}} </span><span class="attr ml-3">capacity :{{Zone.capacity}}</span> <br>
+                    <span class="attr">Available : yes </span><span class="attr ml-3">no.Rooms :{{Zone.numberOfRooms}}</span> <br>
+                    
+                </div>
+            </div>
+            </ng-template>
+          </ng-container>
+       
+    </owl-carousel-o>
+    
+    </div>
